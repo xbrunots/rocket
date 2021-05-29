@@ -41,55 +41,64 @@ class _HomeViewState extends State<HomeView> {
               subTitle: "Selecione um local para o agendamento",
               progress: viewModel.loadingInProgressValue.value,
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 100 * 90,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: TextField(
-                      controller: null,
-                      textAlignVertical: TextAlignVertical.center,
-                      style: TextStyle(
-                          fontSize: 16.0,
-                          fontFamily: 'xpto',
-                          color: ColorParser.fromHex(
-                              Setup.of(context)?.config.editTextContentColor)),
-                      decoration: InputDecoration(
-                          hintText:
-                              "digite para filtrar pontos de vacinação...",
-                          hintStyle: TextStyle(fontSize: 14),
-                          prefixIcon: Padding(
-                            padding: EdgeInsets.all(0.0),
-                            child: Icon(
-                              LineIcons.search,
-                              color: Colors.grey,
-                            ), // icon is 48px widget.
-                          ),
-                          filled: true,
-                          fillColor: ColorParser.fromHex(Setup.of(context)
-                              ?.config
-                              .editTextBackgroundColor),
-                          contentPadding:
-                              EdgeInsets.only(left: 0.0, bottom: 0.0, top: 0.0),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                width: 2,
-                                color: ColorParser.fromHex(Setup.of(context)
-                                    ?.config
-                                    .editTextBorderFocusColor)),
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: ColorParser.fromHex(Setup.of(context)
-                                    ?.config
-                                    .editTextBackgroundColor)),
-                            borderRadius: BorderRadius.circular(24),
-                          )),
-                      onChanged: (String value) {
-                        print("digit: " + value);
-                        viewModel.getListLocations(value);
-                      },
+                Flexible(
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 100 * 90,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 16),
+                      child: TextField(
+                        controller: null,
+                        textAlignVertical: TextAlignVertical.center,
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            fontFamily: 'xpto',
+                            color: ColorParser.fromHex(Setup.of(context)
+                                ?.config
+                                .editTextContentColor)),
+                        decoration: InputDecoration(
+                            hintText:
+                                "digite para filtrar pontos de vacinação...",
+                            hintStyle: TextStyle(fontSize: 14),
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.all(0.0),
+                              child: Icon(
+                                LineIcons.search,
+                                color: Colors.grey,
+                              ), // icon is 48px widget.
+                            ),
+                            filled: true,
+                            fillColor: ColorParser.fromHex(Setup.of(context)
+                                ?.config
+                                .editTextBackgroundColor),
+                            contentPadding: EdgeInsets.only(
+                                left: 0.0, bottom: 0.0, top: 0.0),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  width: 2,
+                                  color: ColorParser.fromHex(Setup.of(context)
+                                      ?.config
+                                      .editTextBorderFocusColor)),
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: ColorParser.fromHex(Setup.of(context)
+                                      ?.config
+                                      .editTextBackgroundColor)),
+                              borderRadius: BorderRadius.circular(24),
+                            )),
+                        onChanged: (String value) {
+                          print("digit: " + value);
+                          viewModel.getListLocations(value);
+                        },
+                      ),
                     ),
+                  ),
+                ),
+                Flexible(
+                  child: Image.asset(
+                    'lib/assets/images/logo.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Flexible(
@@ -102,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                       },
                     ),
                   ),
-                ),
+                )
               ],
             );
           }),

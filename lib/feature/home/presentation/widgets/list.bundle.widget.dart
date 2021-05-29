@@ -22,7 +22,7 @@ class _BundleListWidgetState extends State<BundleListWidget> {
     return Flexible(
       child: Container(
         color: backgroundColor,
-        height: MediaQuery.of(context).size.height - 180,
+        height: MediaQuery.of(context).size.height - 200,
         width: MediaQuery.of(context).size.width,
         child: widget.bundleList.bundles.isNotEmpty
             ? ListView.builder(
