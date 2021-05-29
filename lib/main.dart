@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rocketbase/core/infrastructure/infrastructure.dart';
-import 'package:rocketbase/feature/scheduling/presentation/home.view.dart';
+import 'feature/home/presentation/home.view.dart';
 
 void main() {
   runApp(MyApp());

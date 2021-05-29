@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:rocketbase/core/extensions/colors.extensions.dart';
 import 'package:rocketbase/core/infrastructure/infrastructure.dart';
-import 'package:rocketbase/feature/scheduling/data/model/dto/bundles.dto.dart';
-import 'package:rocketbase/feature/scheduling/presentation/widgets/card.bundle.widget.dart';
+import 'package:rocketbase/feature/home/data/model/dto/bundles.dto.dart';
+import 'package:rocketbase/feature/home/presentation/widgets/card.bundle.widget.dart';
 
 class BundleListWidget extends StatefulWidget {
   final BundleListDto bundleList;

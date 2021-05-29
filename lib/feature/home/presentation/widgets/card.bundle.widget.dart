@@ -6,7 +6,7 @@ import 'package:rocketbase/core/extensions/null.extentions.dart';
 import 'package:rocketbase/core/extensions/text.extentions.dart';
 import 'package:rocketbase/core/infrastructure/infrastructure.dart';
 import 'package:rocketbase/core/widgets/line.widgets.dart';
-import 'package:rocketbase/feature/scheduling/data/model/dto/bundles.dto.dart';
+import 'package:rocketbase/feature/home/data/model/dto/bundles.dto.dart';
 
 class BundleCardWidget extends StatefulWidget {
   final BundleDto bundle;

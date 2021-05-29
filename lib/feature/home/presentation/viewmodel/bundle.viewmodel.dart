@@ -1,6 +1,6 @@
 import 'package:rocketbase/core/base/base.viewmodel.dart';
-import 'package:rocketbase/feature/scheduling/data/model/dto/bundles.dto.dart';
-import 'package:rocketbase/feature/scheduling/domain/bundles.usecase.dart';
+import 'package:rocketbase/feature/home/data/model/dto/bundles.dto.dart';
+import 'package:rocketbase/feature/home/domain/bundles.usecase.dart';
 import 'package:rx_notifier/rx_notifier.dart';
 
 class BundleViewModel extends ViewModel<BundleListDto> {

@@ -1,6 +1,6 @@
 import 'package:rocketbase/core/extensions/null.extentions.dart';
-import 'package:rocketbase/feature/scheduling/data/model/dto/bundles.dto.dart';
-import 'package:rocketbase/feature/scheduling/data/model/response/bundles.response.dart';
+import 'package:rocketbase/feature/home/data/model/dto/bundles.dto.dart';
+import 'package:rocketbase/feature/home/data/model/response/bundles.response.dart';
 
 extension ToBundleListDto on BundleListDto {
   static BundleListDto mapper(BundleListResponse response) {

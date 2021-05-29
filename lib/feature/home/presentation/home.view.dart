@@ -3,8 +3,8 @@ import 'package:line_icons/line_icons.dart';
 import 'package:rocketbase/core/extensions/colors.extensions.dart';
 import 'package:rocketbase/core/infrastructure/infrastructure.dart';
 import 'package:rocketbase/core/widgets/view.widgets.dart';
-import 'package:rocketbase/feature/scheduling/presentation/viewmodel/bundle.viewmodel.dart';
-import 'package:rocketbase/feature/scheduling/presentation/widgets/list.bundle.widget.dart';
+import 'package:rocketbase/feature/home/presentation/viewmodel/bundle.viewmodel.dart';
+import 'package:rocketbase/feature/home/presentation/widgets/list.bundle.widget.dart';
 import 'package:rx_notifier/rx_notifier.dart';
 
 class HomeView extends StatefulWidget {
@@ -51,7 +51,8 @@ class _HomeViewState extends State<HomeView> {
                       style: TextStyle(
                           fontSize: 16.0,
                           fontFamily: 'xpto',
-                          color: Colors.black),
+                          color: ColorParser.fromHex(
+                              Setup.of(context)?.config.editTextContentColor)),
                       decoration: InputDecoration(
                           hintText:
                               "digite para filtrar pontos de vacinação...",
@@ -66,7 +67,7 @@ class _HomeViewState extends State<HomeView> {
                           filled: true,
                           fillColor: ColorParser.fromHex(Setup.of(context)
                               ?.config
-                              .editTextBorderFocusColor),
+                              .editTextBackgroundColor),
                           contentPadding:
                               EdgeInsets.only(left: 0.0, bottom: 0.0, top: 0.0),
                           focusedBorder: OutlineInputBorder(
